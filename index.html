@@ -1,68 +1,166 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
+	<head>
+		<title>私たちの愛</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script language="javascript">  
+			function show_date_time(){  
+				window.setTimeout("show_date_time()", 1000);
+				BirthDay=new Date("05/01/2013 00:00:00");//这个日期是可以修改的
+				today=new Date(); 
+				timeold=(today.getTime()-BirthDay.getTime());  
+				sectimeold=timeold/1000;  
+				secondsold=Math.floor(sectimeold);  
+				msPerDay=24*60*60*1000;  
+				e_daysold=timeold/msPerDay;  
+				daysold=Math.floor(e_daysold);  
+				e_hrsold=(e_daysold-daysold)*24;  
+				hrsold=Math.floor(e_hrsold);  
+				e_minsold=(e_hrsold-hrsold)*60;  
+				minsold=Math.floor((e_hrsold-hrsold)*60);  
+				seconds=Math.floor((e_minsold-minsold)*60); 
+				showtime.innerHTML="我们已经陪伴彼此："+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";  
+}  
+show_date_time();  
+</script>  
+	</head>
+	<body class="is-preload">
 
-<head>
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>I am 小baby</strong>, a Kawaī girl<br />
+					This is my personal blog about love.<br />
+					crafted by ZhuHao.</h1>
+				</div>
+			</header>
 
-  <meta charset="UTF-8">
+		<!-- Main -->
+			<div id="main">
 
-  <title>这是属于小baby的网站</title>
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>这里记录着我们的生活<br />
+							充满了爱和浪漫。</h2>
+						</header>
+						<h2>Save The Date</h2>
+                        <span id="showtime" style="font-size: 28px;">Save the date</span>  
+						<ul class="actions" >
+							<li style="margin-top: 30px;"><a href="#" class="button">Growing......</a></li>
+						</ul>
+					</section>
 
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+				<!-- Two -->
+					<section id="two">
+						<h2>Memory of love</h2>
+						<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<h3>我们是不是很配</h3>
+								<p>拍摄于江苏省，无锡市，锡山区，2018.07.30</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
+								<h3>我是不是很漂亮</h3>
+								<p>拍摄于江苏省，无锡市，锡山区，2018.07.30</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
+								<h3>偷偷去找他，哈哈</h3>
+								<p>拍摄于江苏省，苏州市，常熟市，2018.03.27</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
+								<h3>好想就这么一直的靠在他的肩上</h3>
+								<p>拍摄于江苏省，苏州市，虎丘区，2017.09.30</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
+								<h3>我就是喜欢笑的男生</h3>
+								<p>拍摄于浙江省，杭州市，上城区，2018.04.30</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
+								<h3>西湖边上，美景配佳人</h3>
+								<p>拍摄于浙江省，杭州市，西湖区，2018.04.30</p>
+							</article>
+						</div>
+						<ul class="actions">
+							<li><a href="#" class="button">More Photos</a></li>
+						</ul>
+					</section>
 
-</head>
+				<!-- Three -->
+				<!--  <section id="three">
+						<h2>Get In Touch</h2>
+						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+						<div class="row">
+							<div class="col-8 col-12-small">
+								<form method="post" action="#">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+								</form>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</div>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon fa-home"><span class="label">Address</span></h3>
+										1234 Somewhere Rd.<br />
+										Nashville, TN 00000<br />
+										United States
+									</li>
+									<li>
+										<h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
+										000-000-0000
+									</li>
+									<li>
+										<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
+										<a href="#">hello@untitled.tld</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
 
-<body>
+			</div>
+   			-->
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; 私たちの愛</li><li>Design: ZhuHao</li>
+					</ul>
+				</div>
+			</footer>
 
- <audio autoplay="autoplay" loop="loop" preload="auto" src="music\阮豆 - 爱的魔法（Cover 金沙）.mp3">你的浏览器版本太低，不支持audio标签</audio>
- <body>
-  <div style="text-align:center;clear:both;">
-<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
-<script src="/follow.js" type="text/javascript"></script>
-</div>
-  <div class="wrapper">
-    <div class="border-circle" id="one"></div>
-    <div class="border-circle" id="two"></div>
-    <div class="background-circle">
-      <div class="triangle-light"></div>
-      <div class="body"></div>
-      <span class="shirt-text">I</span>
-      <span class="shirt-text">♥</span>
-      <span class="shirt-text">W</span>
-      <span class="shirt-text">J</span>
-      <span class="shirt-text">W</span>
-      <div class="triangle-dark"></div>
-    </div>
-    <div class="head">
-      <div class="ear" id="left"></div>
-      <div class="ear" id="right"></div>
-      <div class="hair-main">
-        <div class="sideburn" id="left"></div>
-        <div class="sideburn" id="right"></div>
-        <div class="hair-top"></div>
-      </div>
-      <div class="face">
-        <div class="hair-bottom"></div>
-        <div class="nose"></div>
-        <div class="eye-shadow" id="left">
-          <div class="eyebrow"></div>
-          <div class="eye"></div>
-        </div>
-        <div class="eye-shadow" id="right">
-          <div class="eyebrow"></div>
-          <div class="eye"></div>
-        </div>
-        <div class="mouth"></div>
-        <div class="shadow-wrapper">
-          <div class="shadow"></div>
-        </div>
-      </div>
-    </div>
-    <span class="music-note" id="one">&#9835;</span>
-    <span class="music-note" id="two">&#9834;</span>
-  </div>
-</body>
-</html>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-</body>
-
+	</body>
 </html>
