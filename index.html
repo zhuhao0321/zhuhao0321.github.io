@@ -163,9 +163,9 @@
 				    type: "POST",
 				    url: 'https://api.hibai.cn/api/index/index',
 				    dataType: 'json',
-				    data: {"TransCode":"030111","OpenId":"123456789","Body":{"SongListId":"168816836"}},
+				    data: {"TransCode":"030111","OpenId":"123456789","Body":{"SongListId":"123456789"}},
 				    success: function(result){
-						$("#vol").html("<p>"+result.Body.vol+"</p>");
+						$("#vol").html("<a href='"+result.Body.url+"'><p>"+result.Body.vol+"</p></a>");
 						$("#img").attr("src",result.Body.img_url);
 						$("#img_author").html("<p>"+result.Body.img_kind+" | "+result.Body.img_author+"</p>");
 						$("#word").html("<h4>"+result.Body.word+"</h4>");
