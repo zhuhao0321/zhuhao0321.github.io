@@ -1,9 +1,5 @@
 ﻿<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>私たちの愛</title>
@@ -26,8 +22,6 @@
 		
 	</head>
 	<body class="is-preload">
-       
-        
         
 		<!-- Header -->
 			<header id="header">
@@ -42,7 +36,7 @@
 		<!-- Main -->
 			<div id="main">
 			
-				 <!-- music -->
+				<!-- music -->
 				<div class="container">
 					<div class="center-block">
 						<div id="aplayer" class="aplayer"></div>
@@ -61,9 +55,22 @@
 							<li style="margin-top: 30px;"><a href="#" class="button">Growing......</a></li>
 						</ul>
 					</section>
-
-				<!-- Two -->
+					
+					<!-- Two -->
 					<section id="two">
+						<h2>ONE · 一个</h2>
+						<div id="date" style="text-align: center;"></div>
+						<img src="" id="img" style="height: auto;width: auto;max-height: 100%;max-width: 100%;"/>
+						<div style="margin-top: 10px;">
+							<div id="vol" style="float: left;"></div>
+							<div id="img_author" style="float: right;"></div>
+						</div>
+						<div id="word" style="clear: both;margin-top: 10px;"></div>
+						<div id="word_from" style="float: right;"></div>
+					</section>
+
+				<!-- Three -->
+					<section id="three">
 						<h2>Memory of love</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
@@ -102,46 +109,6 @@
 						</ul>
 					</section>
 
-				<!-- Three -->
-				<!--  <section id="three">
-						<h2>Get In Touch</h2>
-						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon fa-home"><span class="label">Address</span></h3>
-										1234 Somewhere Rd.<br />
-										Nashville, TN 00000<br />
-										United States
-									</li>
-									<li>
-										<h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
-										000-000-0000
-									</li>
-									<li>
-										<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-			</div>
-   			-->
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
@@ -168,29 +135,44 @@
 			<script src="musicAPI/bootstrap.min.js"></script>
                      		<script src="musicAPI/APlayer.min.js"></script>
 			<script type="text/javascript">
-	var music = new Array();
-	$.ajax({
-	    type: "POST",
-	    url: 'https://api.hibai.cn/api/index/index',
-	    dataType: 'json',
-	    data: {"TransCode":"020112","OpenId":"123456789","Body":{"SongListId":"379264613"}},
-	    success: function(result){
-			var ap = new APlayer({
-			    element: document.getElementById('aplayer'),
-			    narrow: false,
-			    autoplay: true,
-			    showlrc: 3,
-			    mutex: true,
-			    theme: '#e6d0b2',
-			    mode: 'circulation',
-			    preload: 'metadata',
-			    listmaxheight: '165px',
-			    music: result.Body
+				var music = new Array();
+				$.ajax({
+				    type: "POST",
+				    url: 'https://api.hibai.cn/api/index/index',
+				    dataType: 'json',
+				    data: {"TransCode":"020112","OpenId":"123456789","Body":{"SongListId":"379264613"}},
+				    success: function(result){
+					var ap = new APlayer({
+					    element: document.getElementById('aplayer'),
+					    narrow: false,
+					    autoplay: true,
+					    showlrc: 3,
+					    mutex: true,
+					    theme: '#e6d0b2',
+					    mode: 'circulation',
+					    preload: 'metadata',
+					    listmaxheight: '165px',
+					    music: result.Body
+					});
+	    		}
 			});
-	    }
-	});
-</script>
-
+			</script>
+			<script type="text/javascript">
+				$.ajax({
+				    type: "POST",
+				    url: 'https://api.hibai.cn/api/index/index',
+				    dataType: 'json',
+				    data: {"TransCode":"030111","OpenId":"123456789","Body":{"SongListId":"168816836"}},
+				    success: function(result){
+						$("#vol").html("<p>"+result.Body.vol+"</p>");
+						$("#img").attr("src",result.Body.img_url);
+						$("#img_author").html("<p>"+result.Body.img_kind+" | "+result.Body.img_author+"</p>");
+						$("#word").html("<h4>"+result.Body.word+"</h4>");
+						$("#date").html("<h4>"+result.Body.date.substring(0,10)+"</h4>");
+						$("#word_from").html("<p>————"+result.Body.word_from+"</p>");
+	    			}
+				});
+			</script>
 			<script language="javascript">  
 			function show_date_time(){  
 				window.setTimeout("show_date_time()", 1000);
