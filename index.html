@@ -1,48 +1,153 @@
-<!DOCTYPE HTML>
+﻿<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!DOCTYPE html>
+<html lang="en-US">
+<!--<![endif]-->
 
-<html>
-	<head>
-		<title>Welcome！</title>
-		<link rel="icon" type="image/x-icon" href="favicon.ico" />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+<meta charset="utf-8">
+<title>春节倒计时</title>
+<embed src="http://sc1.111ttt.cn:8282/2016/4/02m/04/195041421461.m4a?tflag=1519095601&pin=6cd414115fdb9a950d827487b16b5f97#.mp3" hidden="true" autostart="true" loop="true">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"><!-- Core Meta Data -->
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<link href="favicon.png" rel="shortcut icon" type="image/png">
 
-				<!-- Main -->
-					<section id="main">
-						<header>
-							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
-							<h1>Wang Jian Wen</h1>
-							<p>Welcome to my website</p>
-							<hr />
-							<ul class="actions special">
-								<li><a href="index/index.html" class="button">Get Into</a></li>
-							</ul>
-						</header>
-					</section>
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; Wang Jian Wen</li><li>Design: Zhu Hao</li>
-						</ul>
-					</footer>
+<!-- CSS -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,900' rel='stylesheet' type='text/css'><!-- Styles -->
+<link href="css/loader.css" rel="stylesheet" type="text/css">
+<link href="css/normalize.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+<!-- Javascript -->
 
+<script src="js/jquery.js"></script>
+</head>
+<body>
+<div class="preloader">
+	<div class="loading">
+		<h2>
+			Loading...
+		</h2>
+		<span class="progress"></span>
+	</div>
+</div>
+
+<div class="wrapper">
+	<ul class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15" id="scene">
+		<li class="layer" data-depth="0.00">
+		</li>
+		<!-- BG -->
+
+		<li class="layer" data-depth="0.10">
+			<div class="background">
+			</div>
+		</li>
+
+		<!-- Hero -->
+
+		<li class="layer" data-depth="0.20">
+			<div class="title">
+				<h2>
+					Spring Festival
+				</h2>
+				<span class="line"></span>
+			</div>
+		</li>
+
+		<li class="layer" data-depth="0.25">
+			<div class="sphere">
+				<img alt="sphere" src="images/sphere.png">
+			</div>
+		</li>
+
+		<li class="layer" data-depth="0.30">
+			<div class="hero">
+				<h1 id="countdown">
+					农历2019年春节（己亥年（猪年）正月初一）
+				</h1>
+
+				<p class="sub-title">
+					农历2019年春节（己亥年（猪年）正月初一）
+				</p>
+			</div>
+		</li>
+		<!-- Flakes -->
+
+		<li class="layer" data-depth="0.40">
+			<div class="depth-1 flake1">
+				<img alt="flake" src="images/flakes/depth1/flakes1.png">
 			</div>
 
-		<!-- Scripts -->
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-			</script>
+			<div class="depth-1 flake2">
+				<img alt="flake" src="images/flakes/depth1/flakes2.png">
+			</div>
 
-	</body>
+			<div class="depth-1 flake3">
+				<img alt="flake" src="images/flakes/depth1/flakes3.png">
+			</div>
+
+			<div class="depth-1 flake4">
+				<img alt="flake" src="images/flakes/depth1/flakes4.png">
+			</div>
+		</li>
+
+		<li class="layer" data-depth="0.50">
+			<div class="depth-2 flake1">
+				<img alt="flake" src="images/flakes/depth2/flakes1.png">
+			</div>
+
+			<div class="depth-2 flake2">
+				<img alt="flake" src="images/flakes/depth2/flakes2.png">
+			</div>
+		</li>
+
+		<li class="layer" data-depth="0.60">
+			<div class="depth-3 flake1">
+				<img alt="flake" src="images/flakes/depth3/flakes1.png">
+			</div>
+
+			<div class="depth-3 flake2">
+				<img alt="flake" src="images/flakes/depth3/flakes2.png">
+			</div>
+
+			<div class="depth-3 flake3">
+				<img alt="flake" src="images/flakes/depth3/flakes3.png">
+			</div>
+
+			<div class="depth-3 flake4">
+				<img alt="flake" src="images/flakes/depth3/flakes4.png">
+			</div>
+		</li>
+
+		<li class="layer" data-depth="0.80">
+			<div class="depth-4">
+				<img alt="flake" src="images/flakes/depth4/flakes.png">
+			</div>
+		</li>
+
+		<li class="layer" data-depth="1.00">
+			<div class="depth-5">
+				<img alt="flake" src="images/flakes/depth5/flakes.png">
+			</div>
+		</li>
+		<!-- Contact -->
+
+		
+	</ul>
+</div>
+
+<!-- Javascript -->
+<script src="js/plugins.js"></script> 
+<script src="js/jquery.countdown.min.js"></script> 
+<script src="js/main.js"></script>
+
+</body>
 </html>
